@@ -12,6 +12,7 @@ require_relative './team_data.rb'
 Player.destroy_all
 Team.destroy_all
 
+# This block is accessing the team_data file and seeding the database with Team data - relative path to team_data required 
 team_data = get_team_data()
 
 team_data.each do |team|
@@ -22,34 +23,19 @@ team_data.each do |team|
     })
 end
 
-# https://stackoverflow.com/questions/14374695/saving-external-json-to-db-with-rails
-def players_save_data_from_api
-    response = HTTParty.get('http://api.fantasy.nfl.com/v1/players/stats?statType=seasonStats&season=2017&format=json')
-    player_data = JSON.parse(response.body)
-    players = player_data["players"]
-    # p players
-    players.each_with_object({}) do |player|
-        # p player
-        create_player = Player.create!({name: player[:name], nfl_team: player[:teamAbbr], position: player[:position], rank: player[:seasonPts]})
-    end
+# This block is making an external API call and using the response data to seed Player data - HTTParty required for this
+# https://stackoverflow.com/questions/14374695/saving-external-json-to-db-with-rails - This was the beginning of my journey, I used countless online searches to put out individual fires.
+response = HTTParty.get('http://api.fantasy.nfl.com/v1/players/stats?statType=seasonStats&season=2017&format=json')
+player_data = JSON.parse(response.body)
+players = player_data["players"]
+# p players
+players.each do |player|
+    # p player
+    name = player["name"]
+    nfl_team = player["teamAbbr"]
+    position = player["position"]
+    rank = player["seasonPts"]
+    # p name, nfl_team, position, rank
+    Player.create!({name: name, nfl_team: nfl_team, position: position, rank: rank})
 end
 
-players_save_data_from_api
-
-
-# players_save_data_from_api.each do |team_name, players|
-#     info = team_data[team_name]
-#     current_team = Team.create!({
-#         name:   info[:name],
-#         img:    info[:img]    
-#     })
-
-    # players.each do |player|
-    #     Player.create!({
-    #         name:       player[:name],
-    #         nfl_team:   player[:teamAbbr],
-    #         position:   player[:position],
-    #         rank:       players[:seasonPts]
-    #     })
-    # end
-# end
