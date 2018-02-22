@@ -12,7 +12,7 @@ require_relative './team_data.rb'
 Player.destroy_all
 Team.destroy_all
 
-# This block is accessing the team_data file and seeding the database with Team data - relative path to team_data required 
+# Access team_data file and seeding the database with Team data - relative path to team_data required 
 team_data = get_team_data()
 
 team_data.each do |team|
@@ -23,8 +23,7 @@ team_data.each do |team|
     })
 end
 
-# This block is making an external API call and using the response data to seed Player data - HTTParty required for this
-# https://stackoverflow.com/questions/14374695/saving-external-json-to-db-with-rails - This was the beginning of my journey, I used countless online searches to put out individual fires.
+# Make an external API call and use the response to seed Player data - HTTParty required for this
 response = HTTParty.get('http://api.fantasy.nfl.com/v1/players/stats?statType=seasonStats&season=2017&format=json')
 player_data = JSON.parse(response.body)
 players = player_data["players"]

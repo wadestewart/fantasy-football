@@ -1,6 +1,8 @@
+<h1>Players</h1>
+<%= react_component("HelloWorld", props: @hello_world_props, prerender: false) %>
+
 <h2>Players</h2>
 
-<%= @players.count %>
 <%= @players.each do |player| %>
     <div>
         <h2><%= link_to "#{player.name} of #{player.nfl_team}"%></h2>
