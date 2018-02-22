@@ -1,0 +1,8 @@
+<h2>Players</h2>
+
+<%= @players.count %>
+<%= @players.each do |character| %>
+    <div>
+        <h2><%= link_to "#{player.name} of #{player.teamAbbr}"%></h2>
+    </div>
+<% end %>
