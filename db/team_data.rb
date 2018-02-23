@@ -2,23 +2,23 @@ def get_team_data
     team_data ={
         "champs" => {
             name: "State Champs",
-            img: "https://images1.apartments.com/i2/eWDy5APj6AoNMv0_LCBpj3WC7y4OggyQ77zwcELfIHk/111/the-state-house-washington-dc-primary-photo.jpg"
+            img: "https://images1.apartments.com/i2/SIv_nVJqLLlYtQwmkeNbV_3zwXbK9EsCoBhjvX4PODU/110/the-state-house-washington-dc-building-photo.jpg"
             },
         "jake" => {
             name: "Jake",
-            img: "http://dl9fvu4r30qs1.cloudfront.net/2d/03/66a75c2649659e104a15bac2a061/chinatown.jpg"
+            img: "http://illusion.scene360.com/wp-content/uploads/2011/12/fortson_03.jpg"
             },
         "kev" => {
             name: "Kid Cass",
-            img: "https://www.joshuamilton.net/uploads/1/4/8/7/14875754/5981210_orig.jpg"
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi44JOA9ushEn3vxzq8q1JQ_ztfFPF2Ex66Nih_CfTTEFYbnEA"
             },
         "frank" => {
             name: "Marlon Newman",
-            img: "https://i.pinimg.com/originals/0e/77/1d/0e771d7c140e22cfdd2d276323a5f415.jpg"
+            img: "http://image.al.com/home/bama-media/width620/img/birmingham-news-stories/photo/brando-newmanjpg-020e3bd5987efc32.jpg"
             },
         "abs" => {
             name: "Tom Bundchen",
-            img: "http://media.masslive.com/patriots/photo/10631045-large.jpg"
+            img: "https://usatftw.files.wordpress.com/2017/10/screen-shot-2017-10-19-at-4-37-24-pm.jpg?w=1000&h=506"
             },
         "elon" => {
             name: "Evelyns",
@@ -26,11 +26,11 @@ def get_team_data
             },
         "james" => {
             name: "Little Jimmy Rags",
-            img: "http://altdaily.com/wp-content/uploads/450px-Jon-Fishman2009-12-28.jpg"
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeE_4z-L5jleys3iTvrNg6bdJyn7zqwRBAya_3I0TOvkwEa1Rb"
             },
         "gabe" => {
             name: "Compartment Syndrome",
-            img: "http://www.thelancet.com/cms/attachment/2009245234/2032050145/gr1_lrg.jpg"
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRin9XGSBuREGDsfx3q_8roOb2vAkzcql5ii8NJ2mg7kFBNvRfr"
             },
         "noel" => {
             name: "The First Noel",
@@ -42,7 +42,7 @@ def get_team_data
             },
         "nathan" => {
             name: "Steel Scorpion41",
-            img: "https://cdn.shopify.com/s/files/1/1270/1769/products/stainless-steel-scorpion-bracelet-bracelets-20715075395.jpg?v=1500781645"
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAtg4oK51W9nZVLCWUXpC9t7MDre9S2CSgwVrKFKq1KntpisgD"
             },
         "hugh" => {
             name: "Pops",

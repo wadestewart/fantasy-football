@@ -5,4 +5,6 @@ class TeamsController < ApplicationController
         @teams = Team.all
     end 
 
+    
+
 end

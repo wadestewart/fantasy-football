@@ -1,9 +1,10 @@
 <h1>Teams</h1>
-<%= react_component("HelloWorld", props: @hello_world_props, prerender: false) %>
 
 <% @teams.each do |team| %>
-    <div class="team">
-        <img src="<%= team.img %>"/>
-        <h2><%= link_to team.name %></h2>
-    </div>
+    <ul class="team">
+        <li class="crop">
+            <img src="<%= team.img %>"/>
+            <h3><%= link_to team.name %></h3>
+        </li>
+    </ul>
 <% end %>

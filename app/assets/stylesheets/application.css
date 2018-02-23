@@ -16,9 +16,12 @@
 
 body {
     text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+}
+
+h1 {
+    margin: 2em;
+    font-size: 2em;
+    text-align: center;
 }
 
 .player a:link {
@@ -26,17 +29,17 @@ body {
 }
 
 .player {
-    display: inline-block;
+    display: flex;
 }
 
-.team {
-    height: 5em;
-    width: 5em;
-    display: inline-block;
+.crop {
+    height: 12em;
+    width: 12em;
+    overflow: hidden;
 }
 
-.team img {
-    height: 100%;
-    width: 100%;
+.crop img {
+    height: auto;
+    width: 12em;
 }
 
